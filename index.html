@@ -11,7 +11,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://grimohex.com/">
   <meta property="og:site_name" content="GrimoHex">
+  <meta property="og:image" content="https://grimohex.com/assets/grimohex-icon.png">
   <link rel="canonical" href="https://grimohex.com/">
+  <link rel="icon" type="image/png" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/grimohex-icon-180.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,7 +23,7 @@
   <header class="site-header">
     <nav class="nav wrap" aria-label="Primary navigation">
       <a class="brand" href="index.html" aria-label="GrimoHex home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark" src="assets/grimohex-icon-180.png" alt="" aria-hidden="true">
         <span>GrimoHex</span>
       </a>
       <div class="nav-links">
@@ -47,38 +50,15 @@
           <p class="hardware-note"><strong>GrimoHex is a standalone sampler and sequencer. No external hardware is required.</strong> MIDI and audio hardware can expand the workflow, but they are optional.</p>
         </div>
 
-        <div class="device-preview" aria-label="Stylized GrimoHex app interface preview">
-          <div class="phone-shell">
-            <div class="screen">
-              <div class="screen-top">
-                <span>GRIMOHEX</span>
-                <span>124 BPM</span>
-              </div>
-              <div class="waveform" aria-hidden="true">
-                <span style="height: 42%"></span>
-                <span style="height: 72%"></span>
-                <span style="height: 34%"></span>
-                <span style="height: 88%"></span>
-                <span style="height: 58%"></span>
-                <span style="height: 96%"></span>
-                <span style="height: 46%"></span>
-                <span style="height: 64%"></span>
-                <span style="height: 30%"></span>
-                <span style="height: 80%"></span>
-                <span style="height: 52%"></span>
-                <span style="height: 68%"></span>
-              </div>
-              <div class="pad-grid" aria-hidden="true">
-                <span>T1</span><span>T2</span><span>T3</span><span>T4</span>
-                <span>T5</span><span>T6</span><span>T7</span><span>T8</span>
-              </div>
-              <div class="steps" aria-hidden="true">
-                <span class="on"></span><span></span><span class="on"></span><span></span>
-                <span></span><span class="on"></span><span></span><span class="hot"></span>
-                <span class="on"></span><span></span><span></span><span class="on"></span>
-                <span></span><span></span><span class="hot"></span><span></span>
-              </div>
-            </div>
+        <div class="product-showcase" aria-label="GrimoHex app icon and screenshot preview">
+          <div class="showcase-icon">
+            <img src="assets/grimohex-icon.png" alt="GrimoHex gold icon">
+          </div>
+          <div class="screenshot-phone screenshot-phone-main">
+            <img src="assets/screenshots/sample-keys-rec-17-pro-max.png" alt="GrimoHex sample editor with keys mode on iPhone">
+          </div>
+          <div class="screenshot-phone screenshot-phone-secondary" aria-hidden="true">
+            <img src="assets/screenshots/step-pad-17-pro-max.png" alt="">
           </div>
         </div>
       </div>
@@ -137,28 +117,19 @@
           <p class="eyebrow">Interface preview</p>
           <h2 id="preview-title">Sampler controls, pad performance, and patterns in one focused space.</h2>
         </div>
-        <div class="preview-grid">
-          <article class="preview-card">
-            <div class="mini-ui sampler-ui" aria-hidden="true">
-              <div class="mini-wave"></div>
-              <div class="mini-controls"><span></span><span></span><span></span></div>
-            </div>
+        <div class="preview-grid screenshot-grid">
+          <article class="preview-card screenshot-card">
+            <img src="assets/screenshots/sample-keys-17e.png" alt="GrimoHex sample slicing and key pads view on iPhone">
             <h3>Sample Capture</h3>
             <p>Record or import a sound, then prepare it for fast pad-based playing.</p>
           </article>
-          <article class="preview-card">
-            <div class="mini-ui pads-ui" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span>
-            </div>
+          <article class="preview-card screenshot-card">
+            <img src="assets/screenshots/step-pad-17-pro-max.png" alt="GrimoHex track pad and step controls on iPhone">
             <h3>Pad Performance</h3>
             <p>Trigger one-shots, chops, and rhythm ideas from a compact eight-pad layout.</p>
           </article>
-          <article class="preview-card">
-            <div class="mini-ui sequence-ui" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
+          <article class="preview-card screenshot-card">
+            <img src="assets/screenshots/sample-step-edit-17-pro-max.png" alt="GrimoHex sample waveform and step edit grid on iPhone">
             <h3>Pattern Sequencing</h3>
             <p>Build repeating patterns and perform changes without leaving the beatmaking flow.</p>
           </article>
@@ -182,7 +153,7 @@
     <div class="wrap footer-grid">
       <div>
         <a class="brand footer-brand" href="index.html" aria-label="GrimoHex home">
-          <span class="brand-mark" aria-hidden="true"></span>
+          <img class="brand-mark" src="assets/grimohex-icon-180.png" alt="" aria-hidden="true">
           <span>GrimoHex</span>
         </a>
         <p>Standalone sampler and sequencer for iPhone and iPad.</p>
