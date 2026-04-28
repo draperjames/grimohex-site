@@ -40,6 +40,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -143,11 +144,12 @@ button:focus-visible {
 
 .hero {
   padding: 6rem 0 4.5rem;
+  overflow: hidden;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.76fr);
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
 }
@@ -270,6 +272,8 @@ h3 {
 
 .product-showcase {
   position: relative;
+  justify-self: end;
+  width: min(100%, 430px);
   min-height: 680px;
   display: grid;
   place-items: center;
@@ -279,9 +283,9 @@ h3 {
 .product-showcase::before {
   content: "";
   position: absolute;
-  inset: 7% 0 auto 15%;
+  inset: 8% auto auto 22%;
   z-index: -1;
-  width: 70%;
+  width: 62%;
   aspect-ratio: 1;
   border: 1px solid rgba(214, 168, 58, 0.18);
   transform: rotate(30deg);
@@ -290,9 +294,9 @@ h3 {
 
 .showcase-icon {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 11rem;
+  top: 1rem;
+  right: 0.75rem;
+  width: 8.5rem;
   border: 1px solid rgba(214, 168, 58, 0.34);
   border-radius: var(--radius);
   background: #111;
@@ -308,7 +312,7 @@ h3 {
 }
 
 .screenshot-phone {
-  width: min(100%, 360px);
+  width: min(100%, 340px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 30px;
   background: #000;
@@ -321,16 +325,16 @@ h3 {
 }
 
 .screenshot-phone-main {
-  transform: translateX(-1.5rem);
+  transform: none;
 }
 
 .screenshot-phone-secondary {
   position: absolute;
   z-index: -1;
-  right: 0;
+  right: 0.35rem;
   bottom: 2rem;
-  width: min(46%, 240px);
-  opacity: 0.72;
+  width: min(42%, 190px);
+  opacity: 0.46;
   transform: rotate(4deg);
   filter: saturate(0.95);
 }
@@ -425,6 +429,12 @@ h3 {
   color: var(--muted);
 }
 
+.content-block h2,
+.contact-panel h2 {
+  font-family: inherit;
+  font-weight: 800;
+}
+
 .screenshot-grid {
   align-items: start;
 }
@@ -451,21 +461,24 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
   background:
-    linear-gradient(90deg, rgba(214, 168, 58, 0.14), rgba(255, 140, 42, 0.1)),
+    linear-gradient(90deg, rgba(214, 168, 58, 0.09), rgba(255, 140, 42, 0.055)),
     var(--panel);
 }
 
 .support-callout h2 {
-  max-width: 760px;
+  max-width: 520px;
+  font-family: inherit;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
 }
 
 .support-callout p:last-child {
-  max-width: 680px;
+  max-width: 620px;
   color: var(--muted);
+  margin-bottom: 0;
 }
 
 .page-hero {
@@ -474,7 +487,7 @@ h3 {
 }
 
 .page-hero h1 {
-  font-size: clamp(2.8rem, 8vw, 5.9rem);
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
 }
 
 .updated {
@@ -514,6 +527,43 @@ h3 {
 .policy-content {
   display: grid;
   gap: 1rem;
+}
+
+.policy-article {
+  max-width: 860px;
+  color: var(--muted);
+}
+
+.policy-section {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-section:first-child {
+  padding-top: 0;
+}
+
+.policy-section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.policy-section h2 {
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 800;
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  margin-bottom: 0.55rem;
+}
+
+.policy-section p {
+  max-width: 760px;
+}
+
+.policy-section a {
+  color: var(--cyan);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
 }
 
 .check-list,
@@ -583,6 +633,7 @@ h3 {
   }
 
   .product-showcase {
+    justify-self: start;
     min-height: 620px;
     place-items: start center;
   }
@@ -665,12 +716,11 @@ h3 {
     font-size: 1.75rem;
   }
 
-  .page-hero .narrow,
-  .support-layout,
   .support-content,
   .policy-content {
+    width: 100%;
     max-width: none;
-    margin-inline: auto;
+    margin-inline: 0;
   }
 
   .page-hero h1 {
@@ -683,8 +733,11 @@ h3 {
   }
 
   .content-block h2,
-  .contact-panel h2 {
-    font-size: 1.35rem;
+  .contact-panel h2,
+  .policy-section h2 {
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 1.25rem;
     line-height: 1.15;
   }
 
@@ -692,7 +745,8 @@ h3 {
   .preview-card p,
   .faq-item p,
   .content-block p,
-  .contact-panel p {
+  .contact-panel p,
+  .policy-section p {
     max-width: 320px;
   }
 
