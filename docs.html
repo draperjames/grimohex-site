@@ -16,6 +16,7 @@
   <link rel="icon" type="image/png" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/grimohex-icon-180.png">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/docs.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,17 +41,17 @@
     <section class="page-hero docs-hero">
       <div class="wrap narrow">
         <p class="eyebrow">Documentation</p>
-        <h1>Manuals and Reference</h1>
-        <p class="lede">Public guides for learning GrimoHex, solving common issues, and understanding the sampler, sequencer, MIDI, effects, and project workflow.</p>
+        <h1 id="docs-page-title">Manuals and Reference</h1>
+        <p class="lede" id="docs-page-lede">Public guides for learning GrimoHex, solving common issues, and understanding the sampler, sequencer, MIDI, effects, and project workflow.</p>
       </div>
     </section>
 
-    <section class="section section-tight">
+    <section class="section section-tight" id="docs-index-section">
       <div class="wrap docs-layout">
         <aside class="contact-panel docs-panel" aria-labelledby="docs-start-title">
           <h2 id="docs-start-title">Start Here</h2>
           <p>New to GrimoHex? Begin with the quick start and interface overview, then keep the feature reference nearby while exploring the app.</p>
-          <a class="button button-primary" href="docs/manual/quick-start.md">Quick Start</a>
+          <a class="button button-primary" href="docs.html?doc=manual/quick-start">Quick Start</a>
         </aside>
 
         <div class="docs-content">
@@ -59,8 +60,8 @@
             <h2 id="overview-title">The public documentation source</h2>
             <p>These files are copied from the GrimoHex app repository. Developer-only notes are intentionally excluded from the website publish.</p>
             <div class="docs-actions" aria-label="Documentation overview links">
-              <a class="button button-secondary" href="docs/manual/index.md">Manual Index</a>
-              <a class="button button-secondary" href="docs/manual/troubleshooting.md">Troubleshooting</a>
+              <a class="button button-secondary" href="docs.html?doc=manual/index">Manual Index</a>
+              <a class="button button-secondary" href="docs.html?doc=manual/troubleshooting">Troubleshooting</a>
             </div>
           </section>
 
@@ -70,19 +71,19 @@
               <h2 id="essential-title">Learn the app quickly.</h2>
             </div>
             <div class="docs-link-grid">
-              <a class="doc-link-card" href="docs/manual/quick-start.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/quick-start">
                 <span>Quick Start</span>
                 <p>Make a first beat, load or record samples, and save a project.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/interface-overview.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/interface-overview">
                 <span>Interface Overview</span>
                 <p>Understand the main screen, top bar, transport, pages, and pad grid.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/ui-reference.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/ui-reference">
                 <span>UI Reference</span>
                 <p>Browse current screens, controls, sheets, gestures, and interaction details.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/feature-reference.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/feature-reference">
                 <span>Feature Reference</span>
                 <p>Review the current implementation status of major features.</p>
               </a>
@@ -95,51 +96,51 @@
               <h2 id="workflow-title">Sampling, sequencing, tracks, and sound design.</h2>
             </div>
             <div class="docs-link-grid">
-              <a class="doc-link-card" href="docs/manual/transport-and-patterns.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/transport-and-patterns">
                 <span>Transport and Patterns</span>
                 <p>Pattern length, tempo, swing, playback, banks, and pattern management.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/tracks-and-pads.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/tracks-and-pads">
                 <span>Tracks and Pads</span>
                 <p>Audio tracks, MIDI tracks, pad modes, selection, and triggering.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/sequencer.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/sequencer">
                 <span>Sequencer</span>
                 <p>Steps, pages, parameter locks, timing, conditions, and retrig behavior.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/parameter-pages.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/parameter-pages">
                 <span>Parameter Pages</span>
                 <p>STEP, SOURCE, FILTER, LEVEL, MOTION, and page-level controls.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/sampler.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/sampler">
                 <span>Sampler</span>
                 <p>Sample loading, playback modes, start and end points, and slot behavior.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/sample-recording.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/sample-recording">
                 <span>Sample Recording</span>
                 <p>Recording sources, capture flow, trimming, and assigning samples.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/sample-slicing.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/sample-slicing">
                 <span>Sample Slicing</span>
                 <p>Slice mode, equal slicing, transient slicing, and slice playback.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/midi.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/midi">
                 <span>MIDI</span>
                 <p>MIDI tracks, note output, virtual ports, and external gear notes.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/effects.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/effects">
                 <span>Effects</span>
                 <p>Global effects, sends, sound shaping, and performance processing.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/mixer-and-buses.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/mixer-and-buses">
                 <span>Mixer and Buses</span>
                 <p>Track levels, panning, sends, buses, and signal routing.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/settings.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/settings">
                 <span>Settings</span>
                 <p>App settings, audio behavior, and configurable workflow options.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/files-and-projects.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/files-and-projects">
                 <span>Files and Projects</span>
                 <p>Project persistence, imported files, saved work, and storage behavior.</p>
               </a>
@@ -152,29 +153,39 @@
               <h2 id="help-title">Support, troubleshooting, and app information.</h2>
             </div>
             <div class="docs-link-grid">
-              <a class="doc-link-card" href="docs/manual/troubleshooting.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/troubleshooting">
                 <span>Troubleshooting</span>
                 <p>Common audio, sample, project, recording, and MIDI fixes.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/faq.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/faq">
                 <span>FAQ</span>
                 <p>Short answers to common GrimoHex product and workflow questions.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/known-limitations.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/known-limitations">
                 <span>Known Limitations</span>
                 <p>Current gaps, partially implemented areas, and expected behavior notes.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/support.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/support">
                 <span>Support</span>
                 <p>Support contact guidance and the information to include in reports.</p>
               </a>
-              <a class="doc-link-card" href="docs/manual/privacy.md">
+              <a class="doc-link-card" href="docs.html?doc=manual/privacy">
                 <span>Privacy</span>
                 <p>Documentation notes about local data, microphone, files, audio, and MIDI.</p>
               </a>
             </div>
           </section>
         </div>
+      </div>
+    </section>
+
+    <section class="section section-tight docs-reader-section" id="docs-reader-section" hidden>
+      <div class="wrap docs-reader-layout">
+        <aside class="docs-reader-nav" aria-labelledby="docs-reader-nav-title">
+          <h2 id="docs-reader-nav-title">Documentation</h2>
+          <nav id="docs-reader-nav" aria-label="Documentation pages"></nav>
+        </aside>
+        <article class="docs-reader" id="docs-reader" aria-live="polite"></article>
       </div>
     </section>
   </main>
